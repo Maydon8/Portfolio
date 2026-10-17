@@ -11,13 +11,18 @@
     padding: 0 20px;
 }
 
-.header {
+.header_container {
     display: flex;
     position: sticky;
     top: 0;
     left: 0;
     background-color: #FFFFFF;
     padding: 32px 24px 32px 24px;
+    z-index: 1000;
+}
+
+.header_container_mb{
+    display: none;
 }
 
 
@@ -55,7 +60,7 @@ nav ul li a.nav_link_home {
     font-size: 47px;
     color: #333333;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
+    flex-direction: row;
 }
 
 .bio p {
@@ -71,6 +76,7 @@ img {
 }
 
 .lang {
+    display: inline-block;
     transform: rotate(-90deg);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
@@ -117,14 +123,12 @@ title {
 .skill_icons {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .skill_icons img {
     width: 166px;
-}
-
-portfolio {
-    background-color: #F6F6F6;
 }
 
 .portfolio {
@@ -173,4 +177,45 @@ portfolio {
     margin-top: 20px;
     margin-bottom: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nav_mb{
+    display: none;
+}
+
+.denis_mini {
+        display: none;
+}
+
+/* .main_banner{
+
+} */
+
+@media screen and (max-width: 400px) {
+    .burger {
+        display: block;
+        width: 30px;
+        cursor: pointer;
+    }
+    .nav{
+        display: none;
+    }
+    .container{
+        width: 400px;
+        padding: 0 px, 20px;
+    }
+    .denis_mini {
+        display: block;
+    }
+
+    .denis{
+        display: none;
+    }
+    .skill_icons{
+        flex-direction: column; 
+        gap: 20px;
+    }
+    .header_container{
+        display: none;
+    }
 }
